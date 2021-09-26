@@ -313,6 +313,29 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   )
                 ],
+                ...[
+                  SliverPersistentHeader(
+                    delegate: _MyHeadertitle(
+                      'Header',
+                      (visible) => _refreshHeader(
+                        'September',
+                        visible,
+                        lastOne: 'August',
+                      ),
+                    ),
+                  ),
+                  SliverList(
+                    delegate: SliverChildBuilderDelegate(
+                      (BuildContext context, int index) {
+                        final int = index + 1;
+                        return ListTile(
+                            title: Text('Day $int',
+                                style: const TextStyle(color: Colors.white)));
+                      },
+                      childCount: 30,
+                    ),
+                  )
+                ],
               ],
             ),
             ValueListenableBuilder<_MyHeader?>(
