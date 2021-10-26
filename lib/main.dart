@@ -4,6 +4,8 @@ import 'package:flutter/foundation.dart';
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+//コメント追加
+//コメント追加
 
 void main() => runApp(
     const MaterialApp(debugShowCheckedModeBanner: false, home: MyHomePage()));
